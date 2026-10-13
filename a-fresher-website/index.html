@@ -6,12 +6,22 @@
   <meta name="x-apple-disable-message-reformatting" />
    <meta name="format-detection" content="telephone=no,date=no,address=no,email=no,url=no"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="color-scheme" content="dark light">
+  <meta name="supported-color-schemes" content="dark light">
+
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
   <title>Newletter</title>
 	
 	<style type="text/css">
+
+ :root {
+      color-scheme: dark light;
+      supported-color-schemes: dark light;
+    }
+
+
 		/* What it does: Another work-around for iOS meddling in triggered links. */
 a[x-apple-data-detectors] {
     color: inherit !important;
@@ -35,7 +45,7 @@ a[x-apple-data-detectors] {
 		}
 		
 		
-		@media only screen and (max-width:480px){
+		@media only screen and (max-width:600px){
 			.image, .image_custom_bannar { width:100%!important; height:auto!important; }
 			.container { width:480px!important; }
 			.db { display: block!important; }
@@ -55,21 +65,38 @@ a[x-apple-data-detectors] {
 			.no-width{width:20% !important;}
            .yes-width{width:60% !important;}
 			}
+
+@media (prefers-color-scheme: light) {
+      .email-bg { background-color: #ffffff !important; }
+      .email-card { background-color: #1e1e1e !important; }
+      .email-text { color: #000000 !important; }
+      .email-muted { color: #d0d0d0 !important; }
+      .email-footer { background-color: #292929 !important; }
+      .email-link { color: #9bbcff !important; }
+	  .logo{display: none !important;}
+	  
+    }
+
 	</style>
 	
 </head>
 	<body>
-<table width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color: #f1f1f1;">
+<!-- Preheader: hidden in the message body, shown by many inboxes in preview text. -->
+  <div style="display:none; font-size:1px; color:#f3f4f6; line-height:1px; max-height:0; max-width:0; opacity:0; overflow:hidden; mso-hide:all;">
+     Latest updates can help your team.
+  </div>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color: #f1f1f1;" >
 <tbody>
 
 <tr>
 <td align="center" valign="top">
-<table width="600" border="0" cellspacing="0" cellpadding="0" style="background-color: #141414; width: 600px;" class="container">
+<table role="presentation" width="600" border="0" cellspacing="0" cellpadding="0" style="background-color: #141414; width: 600px;" class="container email-bg">
 <tbody><!-- Let to strat--->
 	
 <tr>
-	<td align="left" valign="top" style="background-color:#141414;padding: 0px 30px">
-		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<td align="left" valign="top" style="background-color:#141414;padding: 0px 30px" class="email-bg">
+		<table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
   			<tbody>
 	  			<tr><td height="8"></td></tr>
     			<tr>
@@ -84,13 +111,13 @@ a[x-apple-data-detectors] {
 
 <tr>
 	<td align="left" valign="top"  style="padding:0px 30px">
-		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
   			<tbody>
     			<tr><td height="20"></td></tr>
 				<tr>
-				  <td width="55%" align="left" valign="top" class="db dw tc mb"><img src="logo.png" width="190" alt="Logo"/></td>
+				  <td width="55%" align="left" valign="top" class="db dw tc mb"><img src="logo.png" width="190" alt="Logo" class="logo"/></td>
 					<td width="45%" align="right" valign="top" class="db dw tc">
-					<table width="100%" border="0" cellspacing="0" cellpadding="0">
+					<table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
   <tbody>
     <tr>
       <td width="20%" align="right" valign="top" style="font-family: Arial, sans-serif; font-size: 15px; line-height:24px; color:#636363;" class="tc">Websites</td>
@@ -114,12 +141,12 @@ a[x-apple-data-detectors] {
 
 <tr>
 	<td align="left" valign="top" style="padding:0px 30px">
-   		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+   		<table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
   			<tbody>
 				<tr><td height="32"></td></tr>
 				<tr>
 					<td align="left" valign="top">
-						<table width="100%" border="0" cellspacing="0" cellpadding="0">
+						<table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
   <tbody>
    <tr>
       				<td align="left" valign="top" style="font-family: Arial, sans-serif; font-size: 12px; line-height:18px;font-weight:bold; color:#616161;text-transform:uppercase">
@@ -128,7 +155,7 @@ a[x-apple-data-detectors] {
     			</tr>
 				<tr><td height="5"></td></tr>
 				<tr>
-      				<td align="left" valign="top" style="font-family: Arial, sans-serif; font-size: 36px; line-height:38px; color:#FFFFFF;">
+      				<td class="email-text" align="left" valign="top" style="font-family: Arial, sans-serif; font-size: 36px; line-height:38px; color:#FFFFFF;">
 						Staff picks
 					</td>
     			</tr>
@@ -145,17 +172,17 @@ a[x-apple-data-detectors] {
 	
 				<tr>
 		<td align="left" valign="top">
-			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
   <tbody>
 	  <tr><td height="32"></td></tr>
     <tr>
       <td width="50%" align="left" valign="top" class="db dw mb tc">
 		<img src="tola.png" width="232"  alt="tola"/></td>
       <td width="50%" align="left" valign="middle" class="db dw">
-		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
   <tbody>
     <tr>
-      <td align="left" valign="top" style="font-family: Arial, sans-serif; font-size: 28px; line-height:28px; color:#FFFFFF;">Tola</td>
+      <td class="email-text" align="left" valign="top" style="font-family: Arial, sans-serif; font-size: 28px; line-height:28px; color:#FFFFFF;">Tola</td>
     </tr>
 	  <tr><td height="10"></td></tr>
 	  <tr>
@@ -184,17 +211,17 @@ a[x-apple-data-detectors] {
 			<tr><td height="2" style="background-color:#343434"></td></tr>	
 				<tr>
 		<td align="left" valign="top">
-			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
   <tbody>
 	  <tr><td height="32"></td></tr>
     <tr>
       <td width="50%" align="left" valign="top" class="db dw mb tc">
 		<img src="yellowbird.png" width="232"  alt="yellowbird"/></td>
       <td width="50%" align="left" valign="middle" class="db dw">
-		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
   <tbody>
     <tr>
-      <td align="left" valign="top" style="font-family: Arial, sans-serif; font-size: 28px; line-height:28px; color:#FFFFFF;">Yellowbird</td>
+      <td class="email-text" align="left" valign="top" style="font-family: Arial, sans-serif; font-size: 28px; line-height:28px; color:#FFFFFF;">Yellowbird</td>
     </tr>
 	  <tr><td height="10"></td></tr>
 	  <tr>
@@ -227,17 +254,17 @@ often and adventurously as you like.</td>
 				
 				<tr>
 		<td align="left" valign="top">
-			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
   <tbody>
 	  <tr><td height="32"></td></tr>
     <tr>
       <td width="50%" align="left" valign="top" class="db dw mb tc">
 		<img src="mantie.png" width="232"  alt="mantle"/></td>
       <td width="50%" align="left" valign="middle" class="db dw">
-		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
   <tbody>
     <tr>
-      <td align="left" valign="top" style="font-family: Arial, sans-serif; font-size: 28px; line-height:28px; color:#FFFFFF;">MAN-TLE</td>
+      <td class="email-text" align="left" valign="top" style="font-family: Arial, sans-serif; font-size: 28px; line-height:28px; color:#FFFFFF;">MAN-TLE</td>
     </tr>
 	  <tr><td height="10"></td></tr>
 	  <tr>
@@ -268,17 +295,17 @@ Australian company designing and manufacturing the collections of MANTLE.</td>
 				<tr><td height="2" style="background-color:#343434"></td></tr>
 				<tr>
 		<td align="left" valign="top">
-			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
   <tbody>
 	  <tr><td height="32"></td></tr>
     <tr>
       <td width="50%" align="left" valign="top" class="db dw mb tc">
 		<img src="monolif.png" width="232"  alt="monolif"/></td>
       <td width="50%" align="left" valign="middle" class="db dw">
-		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
   <tbody>
     <tr>
-      <td align="left" valign="top" style="font-family: Arial, sans-serif; font-size: 28px; line-height:28px; color:#FFFFFF;">MONOLIF</td>
+      <td class="email-text" align="left" valign="top" style="font-family: Arial, sans-serif; font-size: 28px; line-height:28px; color:#FFFFFF;">MONOLIF</td>
     </tr>
 	  <tr><td height="10"></td></tr>
 	  <tr>
@@ -311,7 +338,7 @@ bespoke websites &amp; digital experiences for startups. </td>
 				<tr><td height="32"></td></tr>
 				
 				<tr><td align="left" valign="top" style="background-color:#BCFE2F; padding:0px 22px;border-radius:12px">
-					<table width="100%" border="0" cellspacing="0" cellpadding="0">
+					<table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
   <tbody>
 	  <tr><td height="16"></td></tr>
     <tr>
@@ -319,7 +346,7 @@ bespoke websites &amp; digital experiences for startups. </td>
   font-weight:700;
    color:#000000;font-size:14px;line-height: 24px">Get inspired with no limits</td>
 		 <td width="40%" align="right" valign="top">
-			 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+			 <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
   <tbody>
    <tr><td align="right" valign="top" style="font-family: Arial, sans-serif; font-size: 16px; line-height:24px; color:#ffffff;">
 		  <a href="#" target="_blank" style="font-family: Arial, sans-serif; font-size: 16px; line-height:24px; color:#ffffff;background-color:#262626;display: inline-block;padding:12px 22px;border-radius:8px;">Become PRO</a>
@@ -354,7 +381,7 @@ bespoke websites &amp; digital experiences for startups. </td>
 
 	<tr>
 	<td align="left" valign="top"  style="padding:0px 30px">
-		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
   			<tbody>
     			<tr><td height="32"></td></tr>
 				<tr>
@@ -376,7 +403,7 @@ bespoke websites &amp; digital experiences for startups. </td>
 	
 	<tr>
 	<td align="left" valign="top" style="padding: 0px 30px;">
-		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
 			<tbody>
 				<tr><td height="32"></td></tr>
 				<tr>
@@ -404,7 +431,7 @@ bespoke websites &amp; digital experiences for startups. </td>
 
 	<tr>
 	<td align="left" valign="top" >
-		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
   			<tbody>
     			
 				<tr>
